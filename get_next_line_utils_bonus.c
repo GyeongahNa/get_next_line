@@ -49,8 +49,8 @@ char	*ft_strcat(char *dest, const char *src)
 
 char	*ft_strdup(const char *s)
 {
-	int		i;
-	int		len;
+	int	i;
+	int	len;
 	char	*new_s;
 
 	i = 0;
