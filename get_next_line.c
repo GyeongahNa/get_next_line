@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include "get_next_line.h"
 
-int		str_len(char *str)
+int	str_len(char *str)
 {
 	int len;
 
@@ -41,9 +41,9 @@ char	*ft_strchr(const char *str, int c)
 	return ((char *)(0));
 }
 
-int		to_line(int fd, char **arr, char **line)
+int	to_line(int fd, char **arr, char **line)
 {
-	int		len;
+	int	len;
 	char	*tmp;
 
 	len = str_len(arr[fd]);
@@ -70,7 +70,7 @@ int		to_line(int fd, char **arr, char **line)
 	}
 }
 
-int		output(int ret, int fd, char **arr, char **line)
+int	output(int ret, int fd, char **arr, char **line)
 {
 	if (ret < 0)
 		return (-1);
@@ -83,12 +83,12 @@ int		output(int ret, int fd, char **arr, char **line)
 		return (to_line(fd, arr, line));
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	char		*buff;
 	static char	*arr[1024] = {0, };
 	char		*tmp;
-	int			ret;
+	int		ret;
 
 	if (fd < 0 || line == 0 || BUFFER_SIZE <= 0)
 		return (-1);
